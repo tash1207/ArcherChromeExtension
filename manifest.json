@@ -1,0 +1,17 @@
+{
+ "manifest_version": 2,
+ "name": "Random Archer Quotes",
+ "description": "Randomly displays a quote from the TV Show Archer.",
+ "version": "1.0",
+ "browser_action": {
+    "default_icon": "archer_big.png",
+    "default_popup": "popup.html"
+ }, 
+ "content_scripts": [
+  {
+	"matches": ["https://www.google.com/*", "http://www.google.com/*"],
+	"js": ["main.js"]
+  } 
+ ]
+
+}
