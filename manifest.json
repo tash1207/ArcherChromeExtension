@@ -6,5 +6,8 @@
  "browser_action": {
     "default_icon": "archer_big.png",
     "default_popup": "popup.html"
+ },
+ "icons": {
+    "128": "archer_big.png"
  } 
 }
