@@ -1,3 +1,20 @@
+Array.prototype.remove = function(from, to) {
+  var rest = this.slice((to || from) + 1 || this.length);
+  this.length = from < 0 ? this.length + from : from;
+  return this.push.apply(this, rest);
+};
+
+Array.prototype.move = function (old_index, new_index) {
+    if (new_index >= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+};
+
 var lines = [
   "I have to go. But if I find one single dog hair when I get back, I'll rub...sand...in your dead little eyes.",
   "[pause] I also need you to buy sand.",
@@ -411,4 +428,23 @@ var lines = [
   "Do you want to live through the Rise of the Machines, which you won't, because no one will?"
 ];
 
-$("body").children("h2").html(lines[Math.floor(Math.random()*lines.length)]);
+// Grab the quote indexes we've used before from local storage
+var usedQuotes = (localStorage.usedQuotes) ? localStorage.usedQuotes.split(",") : [];
+
+// Remove used quotes from the list of quotes
+var offset = 0;
+for (var q in usedQuotes) {
+  lines.move(parseInt(usedQuotes[q]) + offset);
+  offset++;
+}
+lines.splice(0, usedQuotes.length);
+
+// Grab the quote
+var quoteIndex = Math.floor(Math.random()*lines.length);
+
+// Show the quote
+$("body").children("h2").html(lines[quoteIndex]);
+
+// Save the quotes we've used back to local storage
+usedQuotes.push(quoteIndex + offset);
+localStorage["usedQuotes"] = usedQuotes;
