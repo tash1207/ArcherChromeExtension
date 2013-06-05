@@ -1,4 +1,5 @@
 var lines = [
+"Good heavens. A murder? Well apart from this sullen wench murdering good etiquette- Ow.", 
   "I have to go. But if I find one single dog hair when I get back, I'll rub...sand...in your dead little eyes.",
   "[pause] I also need you to buy sand.",
   "I don't know if they grade it, but... coarse.",
