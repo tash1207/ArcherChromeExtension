@@ -411,6 +411,44 @@ var lines = [
   "Do you want to live through the Rise of the Machines, which you won't, because no one will?"
 ];
 
+var lana_lines = [
+"You're looking for Predator aren't you? A, he's invisible.",
+"Don't take this the wrong way, but I'm trying to figure out how you're going to be an effective field agent.",
+"Yeah, gotta give him a sploosh.",
+"On your knees, hands behind your head, and toss out that weapon! But not in that order.",
+"As what? Russia's only black woman?",
+"You turned Archer loose with four million dollars in a casino?",
+"Chain smoking joints the size of tampons.",
+"Oh my... you're getting off on this!",
+"If your aunt has balls, she'd be your uncle.",
+"And?",
+"This isn't the Sheriff's department where you get to wear a windbreaker and go on a ride-along. This is highly classified covert ops.",
+"Well if you like the collar, you're gonna love the cuffs.",
+"What's your third biggest fear?",
+"What's a brain aneurysm have to do with walking around in a swamp?",
+"[Opens a cooler of nothing but beer] You're shitting me.",
+"How could an airboat be selfish?",
+"He's attacked nuclear power plants, hydroelectric dams, and whaling ships.",
+"Is that a friggin' candy bar?",
+"Did you see me holding that baby?",
+"'Taking' as in to get this job I have to have sex with you?",
+"No, she looks like she's just turning 18.",
+"Good thing you know how to cheat.",
+"Hi, if any of you men want to have sex with me [Cyril gasps] come to my office and take a number.",
+"Barry, you might want to call the cleaners. [SMASH, Lana looks down at unconscious Barry] Because there is lamp everywhere.",
+"Didja wanna finish that thought?",
+"Did Cyril run past here sobbing in a woman's bathrobe?",
+"WHAT!!!?",
+"Noooo... Sudden is wanting your girlfriend to move in with you after only 4 months.",
+"Thanks, no. I'm allergic to cat piss.",
+"A non-circumsized Jewish guy, that's not weird to you?",
+"It doesn't work like that.",
+"Ish!?",
+"(sarcastic) Imagine that!!",
+"Where? Outside a clown college?",
+"I blew jack shit!"
+];
+
 // Grab the quote indexes we've used before from local storage
 var usedQuotes = (localStorage.usedQuotes) ? localStorage.usedQuotes.split(",") : [];
 
