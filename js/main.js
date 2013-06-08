@@ -24,7 +24,6 @@ var lines = [
   "So, obviously, it would be a lot easier for me if you just disabled all that when you left work tonight... somehow.",
   "Ugh, God, everything makes you uncomfortable!",
   "Just the tip?",
-  "Just the tip?",
   "Just the tip!",
   "How was I supposed to know you're lactose intolerant?",
   "Just the tip. [Pause] Actually, I don't have any cash on me. Could you... get it? I also need cab fare. Awww, Ugly Duckling. Bork Bork.",
