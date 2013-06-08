@@ -1,20 +1,3 @@
-Array.prototype.remove = function(from, to) {
-  var rest = this.slice((to || from) + 1 || this.length);
-  this.length = from < 0 ? this.length + from : from;
-  return this.push.apply(this, rest);
-};
-
-Array.prototype.move = function (old_index, new_index) {
-    if (new_index >= this.length) {
-        var k = new_index - this.length;
-        while ((k--) + 1) {
-            this.push(undefined);
-        }
-    }
-    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
-    return this; // for testing purposes
-};
-
 var lines = [
 "Good heavens. A murder? Well apart from this sullen wench murdering good etiquette- Ow.", 
   "I have to go. But if I find one single dog hair when I get back, I'll rub...sand...in your dead little eyes.",
@@ -23,7 +6,7 @@ var lines = [
   "No, I think Jenga's a game, and...",
   "I assume you would be trying to suck a promotion out of some Russian guy's cock.",
   "...and never will...",
-  "And maybe you just got your face kicked off! [Archer puts his foot in Krenshaw's face] That is my foot in your face. Smell the embarrassme— [Krenshaw shocks Archer's foot with a golf cart battery]",
+  "And maybe you just got your face kicked off! [Archer puts his foot in Krenshaw's face] That is my foot in your face. Smell the embarrassme- [Krenshaw shocks Archer's foot with a golf cart battery]",
   "That's not... a real place.",
   "Sorry, I was picturing Whore Island.",
   "You're looking for the answer 'yes'?",
@@ -46,7 +29,7 @@ var lines = [
   "How was I supposed to know you're lactose intolerant?",
   "Just the tip. [Pause] Actually, I don't have any cash on me. Could you... get it? I also need cab fare. Awww, Ugly Duckling. Bork Bork.",
   "Well, thanks for nothing, Carol. Now I need to break into ISIS headquarters in a $900 turtleneck. And if it gets ruined I'll make you drink heavy cream, you... Carol!",
-  "Wow, that was actually pretty easy! Thanks, new turtleneck! [rips his turtleneck] Aw, f— And thank you, duffle bag!",
+  "Wow, that was actually pretty easy! Thanks, new turtleneck! [rips his turtleneck] Aw, f- And thank you, duffle bag!",
   "Holy shit, our security is atrocious. Seriously, it's really bad.",
   "Password. Hmm, password? How about 'Guest'.",
   "No way! It can't be. Jesus Christ, that is just... babytown frolics.",
@@ -61,7 +44,7 @@ var lines = [
   "Is that... sound... is that Jewish?",
   "Um. [long pause] Russian Jewish?",
   "Lana! Krenshaw's a mole! And his real name isn't Krenshaw, it's Kremenski. Definitely Russian! Possibly a Jew! Thoughts?",
-  "[shoots Krenshaw] Me? Nothing! You, on the other hand— [Mallory hits Archer with her handbag] What's in there, buckles?",
+  "[shoots Krenshaw] Me? Nothing! You, on the other hand- [Mallory hits Archer with her handbag] What's in there, buckles?",
   "Just half of one. The other half would have missed you. Oh wait...",
   "Johnny Bench called.",
   "Apology accepted. Ass douche.",
@@ -72,7 +55,7 @@ var lines = [
   "But I wonder what Lana thinks about...",
   "Wow. 'Open purse, remove balls,' huh?",
   "Uh hello! Herpes?!",
-  "Wha— Since when?",
+  "Wha- Since when?",
   "Well that's just... Excuse us.",
   "Bad joke. And a false alarm.",
   "This is what a real field agent uses.",
@@ -96,7 +79,7 @@ var lines = [
   "You imagine it!",
   "Only that he's uncircumcised.",
   "We touched penises.",
-  "What's weird about that? I'm not Jewish but I am circum—",
+  "What's weird about that? I'm not Jewish but I am circum-",
   "Oh Lana, I think we both know it works just fine.",
   "Uh, none-of-your-business-ing. And what kind of spy agency scrimps on a freaking shredder?",
   "No. I missed on purpose.",
@@ -120,7 +103,7 @@ var lines = [
   "God, Cyril, that was... [gunshot] pathetic.",
   "No! Have you ever seen CSI? This is already like Clue Town.",
   "Wha... oh.",
-  "But this gun—it was a gift.",
+  "But this gun-it was a gift.",
   "You don't know.",
   "We still didn't get the UN contract.",
   "[Wearing only a towel and baseball catcher's mask] WOODHOUSE! Do we have any lube? Like at this point even some olive oil would [finds his mother in the living room] help me get that drawer unstuck.",
@@ -292,7 +275,7 @@ var lines = [
   "Yes, Lana, with the... Dammit!",
   "I am getting off, I love this.",
   "Don't 'lesson one' me, Barry.",
-  "Piece of—! How are you a super power!?",
+  "Piece of-! How are you a super power!?",
   "Oh that is bullshit! Who would break into this shit hole!?",
   "Yeah right, like you've got plans.",
   "Hey. Fuck you, you douche bag.",
@@ -305,7 +288,7 @@ var lines = [
   "It's ok, it was just cancer sex.",
   "So you! [Smack] Can you hack into the KGB servers?",
   "Wait, does Canada even have a spy agency?",
-  "Wha— why? Haha, it's Canada.",
+  "Wha- why? Haha, it's Canada.",
   "Is anybody hit? Not really the explosive climax I thought it was gonna be.",
   "[To Barry] How are you not dead?",
   "[While being choked by Barry] Wow, Barry, you're like super-strong!",
@@ -360,7 +343,7 @@ var lines = [
   "Okay... it's not though.",
   "[Describing an Ocelot's paw-prints] They look just like a housecat's, but bigger and awesomer.",
   "[to Babou the ocelot while handcuffed in a police car] They called you exotic. Which is just people talk for awesome. Which you are, which is why I am so happy I saved your life, buddy. [Babou growls and squeaks to him] Don't worry, probably just thousands of dollars in fines, maybe a little bit of jail time, hopefully just probation. [Babou leans forward and urinates on the car seat next to Archer. Archer speaks in a strained voice] Totally worth it. [Babou growls] No, Babou, that was all sarcasm. [more growls] YES, ALL OF IT, YOU FOX-EARED ASSHOLE!",
-  "[Climbing to the top of the moving train] This is going to be awe— SHIIIIITT! [The wind causes Archer to lose his gun] AHHHH! The dust! It's like being shot in the eyes by a... glitter gun! [Puts on night vision goggles] There, that ought to do it. Okay, let's try this aga— [Gets blinded by the lights of a passing train] AAARGHSHIIIITTTT! My retinas are seared like tuna steaks!!! ALL I WANT IS TO FIGHT ON TOP OF A TRAIN! IS THAT TOO MUCH TO ASK?! [Switches off the night-vision on his goggles] The good news is, now I'm furious.",
+  "[Climbing to the top of the moving train] This is going to be awe- SHIIIIITT! [The wind causes Archer to lose his gun] AHHHH! The dust! It's like being shot in the eyes by a... glitter gun! [Puts on night vision goggles] There, that ought to do it. Okay, let's try this aga- [Gets blinded by the lights of a passing train] AAARGHSHIIIITTTT! My retinas are seared like tuna steaks!!! ALL I WANT IS TO FIGHT ON TOP OF A TRAIN! IS THAT TOO MUCH TO ASK?! [Switches off the night-vision on his goggles] The good news is, now I'm furious.",
   "Paging Doctor Boy, Doctor Birthday Boy!",
   "Does no one seriously know what today is?",
   "Is it going to kill everyone?",
@@ -412,7 +395,7 @@ var lines = [
   "[To Cyborg-Katya] That's your original skin, right?",
   "What?",
   "Can you close your eyes? It feels like I'm banging tail-lights on a country road.",
-  "Which makes me feel even more terrible, since I'm going to puke it back up in five— [burps] one minutes...",
+  "Which makes me feel even more terrible, since I'm going to puke it back up in five- [burps] one minutes...",
   "Is...? Okay, I'll bite.",
   "Krieger!",
   "Vacuum Cleaner puns?! Really?!",
@@ -432,20 +415,27 @@ var lines = [
 // Grab the quote indexes we've used before from local storage
 var usedQuotes = (localStorage.usedQuotes) ? localStorage.usedQuotes.split(",") : [];
 
+// Save original position of quotes
+for (var l = 0; l < lines.length; l++ ) {
+  lines[l] = [l, lines[l]];
+}
+
 // Remove used quotes from the list of quotes
 var offset = 0;
 for (var q in usedQuotes) {
-  lines.move(parseInt(usedQuotes[q]) + offset);
-  offset++;
+  q = parseInt(q)
+  for (var l = 0; l < lines.length; l++) {
+    if (q == lines[l][0]) lines.splice(l, 1);
+    break;
+  }
 }
-lines.splice(0, usedQuotes.length);
 
 // Grab the quote
 var quoteIndex = Math.floor(Math.random()*lines.length);
 
-// Show the quote
-$("body").children("h2").html(lines[quoteIndex]);
-
 // Save the quotes we've used back to local storage
-usedQuotes.push(quoteIndex + offset);
+usedQuotes.push(lines[quoteIndex][0]);
 localStorage["usedQuotes"] = usedQuotes;
+
+// Show the quote
+$("body").children("h2").html(lines[quoteIndex][1]);
