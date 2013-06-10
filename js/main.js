@@ -1,5 +1,5 @@
 var lines = [
-["archer", "Good heavens. A murder? Well apart from this sullen wench murdering good etiquette- Ow."], 
+  ["archer", "Good heavens. A murder? Well apart from this sullen wench murdering good etiquette- Ow."], 
   ["archer", "I have to go. But if I find one single dog hair when I get back, I'll rub...sand...in your dead little eyes."],
   ["archer", "[pause] I also need you to buy sand."],
   ["archer", "I don't know if they grade it, but... coarse."],
@@ -431,6 +431,7 @@ var lines = [
   ["lana", "'Taking' as in to get this job I have to have sex with you?"],
   ["lana", "No, she looks like she's just turning 18."],
   ["lana", "Good thing you know how to cheat."],
+  ["lana", "[over building intercom] Um, attention. Hi, this is Agent Kane, and if you want to have ball-slappy sex with me on Cyril's desk, please line up and take a number."],
   ["lana", "Hi, if any of you men want to have sex with me [Cyril gasps] come to my office and take a number."],
   ["lana", "Barry, you might want to call the cleaners. [SMASH, Lana looks down at unconscious Barry] Because there is lamp everywhere."],
   ["lana", "Didja wanna finish that thought?"],
@@ -443,7 +444,27 @@ var lines = [
   ["lana", "Ish!?"],
   ["lana", "(sarcastic) Imagine that!!"],
   ["lana", "Where? Outside a clown college?"],
-  ["lana", "I blew jack shit!"]
+  ["lana", "I blew jack shit!"],
+  ["lana", "...thanks to your epic poon-houndery!"],
+  ["lana", "Talk what out? How you ruined my chance to work for ODIN? Or, ooooh, maybe how I just caught my boyfriend balls deep in some French chick."],
+  ["lana", "Ya think?"],
+  ["lana", "Because, between the cancer and the chemo and the just shit-tons of weed..."],
+  ["lana", "The white Queen of Africa?"],
+  ["lana", "So, what would you say if I told you that your mother made a phony bomb threat just to get a free ride on a blimp?"],
+  ["lana", "Why should I care if Archer knocked up some dumb hooker?"],
+  ["lana", "No, he's not *a* hobbit. He's a hobbit *enthusiast*."],
+  ["lana", "I don't care if you have fifty dead hookers in the trunk. You lied to me."],
+  ["lana", "When we first started going out I may have [quickly] injected a tracking device into your body."],
+  ["lana", "Depends. Who are you supposed to be, Topper Bottoms, stern yet sensual skipper of the USS Rough Service?"],
+  ["lana", "Ah, dammit, that was the guy in charge of the chocolate fountain."],
+  ["lana", "Uhh... Kill... Kill... God, when do I get to the end so I can see what Cyril said?"],
+  ["lana", "Do... do you even get hangovers anymore?"],
+  ["lana", "Was that before or after you got caught fondling a teenager?"],
+  ["lana", "I'm serious. I want it on record that I think this is a terrible plan."],
+  ["lana", "...vehicular hermaphrodite?"],
+  ["lana", "NOOOPE!"],
+  ["lana", "YUUP!"],
+  ["lana", "It might sound like I'm hanging up but......"]
 ];
 
 // Grab the quote indexes we've used before from local storage
