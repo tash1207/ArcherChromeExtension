@@ -1,5 +1,5 @@
 var lines = [
-  ["archer", "Good heavens. A murder? Well apart from this sullen wench murdering good etiquette- Ow."], 
+  ["dinner_party", "Good heavens. A murder? Well apart from this sullen wench murdering good etiquette- Ow."], 
   ["archer", "I have to go. But if I find one single dog hair when I get back, I'll rub...sand...in your dead little eyes."],
   ["archer", "[pause] I also need you to buy sand."],
   ["archer", "I don't know if they grade it, but... coarse."],
@@ -408,7 +408,15 @@ var lines = [
   ["archer", "Don't, Don't you say it"],
   ["archer", "What, really?"],
   ["archer", "[Seeing Cyril's orange snow clothes on the ground] Okay, so...really don't know what to make of that. Unless...[Looks around] Wait, no, no. Get it out of your head. Preadator only hunts in tropical jungles...I assume...and desperately hope."],
-  ["archer", "Do you want to live through the Rise of the Machines, which you won't, because no one will?"]
+  ["archer", "Do you want to live through the Rise of the Machines, which you won't, because no one will?"],
+  ["archer", "Can't or won't?"],
+  ["archer", "And your shoes! Because how hard is it to poach a goddamn egg properly? Seriously, that's like Eggs 101, Woodhouse."],
+  ["archer", "Do you not see me rocking this chiseled slab of hard man body? I mean, come on! Are you gay or not?"],
+  ["archer", "Hey, I am everybody's type."],
+  ["archer", "How'd you get life insurance, Lana? Don't they know you're in the danger zone?"],
+  ["archer", "Hey, we're out there risking out lives every- many of the days!"],
+  ["archer", "Lying is like 95% of what I do."],
+  ["archer", "Woodhouse, we got any lube? Like even olive oil at this point would... help me get that drawer unstuck."],
   ["lana", "You're looking for Predator aren't you? A, he's invisible."],
   ["lana", "Don't take this the wrong way, but I'm trying to figure out how you're going to be an effective field agent."],
   ["lana", "Yeah, gotta give him a sploosh."],
@@ -464,7 +472,33 @@ var lines = [
   ["lana", "...vehicular hermaphrodite?"],
   ["lana", "NOOOPE!"],
   ["lana", "YUUP!"],
-  ["lana", "It might sound like I'm hanging up but......"]
+  ["lana", "It might sound like I'm hanging up but......"],
+  ["malory", "An erection? The thought of me dead gives you an erection?"],
+  ["malory", "ISIS isn't your own personal travel agency. It doesn't exist so you can jet off to Whore Island."],
+  ["malory", "Oh Pam's just as full of crap as she is carbohydrates."],
+  ["malory", "Do you want ants? Because that's how you get ants."],
+  ["malory", "Ugh... it smells like a whorehouse in here."],
+  ["malory", "[to her chauffeur] If I wanted to sit around all day going nowhere, I'd be a teacher."],
+  ["malory", "Oh please. That Brazillian au pair did that when you were thirteen."],
+  ["malory", "Waltz in here, dressed like some sort of cattle rapist, waving a cleaver, and reeking of what I hope to God is meat, and that's all you have to say?"],
+  ["malory", "All right, we want this to look like a classic hooker murder/suicide. So... Cyril take Sterling's gun and pump a round into his prostitute."],
+  ["malory", "Immigrants. Cramming their low riders full of free healthcare and... snow."],
+  ["malory", "[the wee baby Seamus is sitting, crying on Malory's desk] What the hell is wrong with him?"],
+  ["malory", "The secret is negative reinforcement."],
+  ["malory", "Don't shoot! Please! I just killed a man and I think my water just broke, so, I could really really use a drink."],
+  ["malory", "Wherever. Just get out of here. I have no more love to give today."],
+  ["malory", "I liked him better when he had cancer."],
+  ["malory", "Ugh! Just what Miami needs, more Cubans."],
+  ["malory", "Because I don't want Sterling to end up with a woman like Lana Kane! My god, a black [pause] ops field agent."],
+  ["malory", "Oh, like you'd recognize a vegetable that wasn't wrapped in a Monte Cristo sandwich."],
+  ["malory", "Immigrants! That's what they do, you know. Just drive around listening to raps and shooting all the jobs."],
+  ["malory", "If I cared about what you do on the weekend, I'd stick a shotgun in my mouth and pull the trigger with my toes."],
+  ["malory", "Oh, the same entitled crap as always. 'I can't make ends meet. I'm on food stamps. My child died because I couldn't afford new bone marrow.' Just me, me, me, me, me."],
+  ["malory", "Look at me! Chopping ice for a Tom Collins like a field hand."],
+  ["malory", "How can you even think about happy hour at a time like this? [Malory takes a drink from a highball glass]"],
+  ["malory", "Well, people in hell want ice water."],
+  ["malory", "The classic Irish man's dilemma: Do I eat the potato or do I let it ferment so I can drink it later?"],  
+  ["dinner_party", "CALPERNIA!"]
 ];
 
 // Grab the quote indexes we've used before from local storage
@@ -493,5 +527,19 @@ usedQuotes.push(lines[quoteIndex][0]);
 localStorage["usedQuotes"] = usedQuotes;
 
 // Show the quote
-$("body").children("img").prop("src", (lines[quoteIndex][1][0] == "archer") ? "archer_big.png" : "lana_big.png");
+var image = "";
+if (lines[quoteIndex][1][0] == "archer") {
+  image = "archer_big.png";
+}
+else if (lines[quoteIndex][1][0] == "lana") {
+  image = "lana_big.png";
+}
+else if (lines[quoteIndex][1][0] == "malory") {
+  image = "malory.png";
+}
+else {
+  image = "archer_elegant_dinner_party.jpg";
+}
+$("body").children("img").prop("src", image);
+//$("body").children("img").prop("src", (lines[quoteIndex][1][0] == "archer") ? "archer_big.png" : "lana_big.png");
 $("body").children("h2").html(lines[quoteIndex][1][1]);
