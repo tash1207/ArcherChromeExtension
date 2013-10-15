@@ -4,10 +4,10 @@
  "description": "Randomly displays a quote from the TV Show Archer.",
  "version": "1.0",
  "browser_action": {
-    "default_icon": "archer_big.png",
+    "default_icon": "images/archer.png",
     "default_popup": "popup.html"
  },
  "icons": {
-    "128": "archer_big.png"
+    "128": "images/archer.png"
  } 
 }
