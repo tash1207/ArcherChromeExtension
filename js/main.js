@@ -1,3 +1,13 @@
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+}
+
 var lines = [
   ["dinner_party", "Good heavens. A murder? Well apart from this sullen wench murdering good etiquette- Ow."], 
   ["archer", "I have to go. But if I find one single dog hair when I get back, I'll rub...sand...in your dead little eyes."],
@@ -502,44 +512,27 @@ var lines = [
 ];
 
 // Grab the quote indexes we've used before from local storage
-var usedQuotes = (localStorage.usedQuotes) ? localStorage.usedQuotes.split(",") : [];
-
-// Save original position of quotes
-for (var l = 0; l < lines.length; l++ ) {
-  lines[l] = [l, lines[l]];
-}
-
-// Remove used quotes from the list of quotes
-var offset = 0;
-for (var q in usedQuotes) {
-  q = parseInt(q)
-  for (var l = 0; l < lines.length; l++) {
-    if (q == lines[l][0]) lines.splice(l, 1);
-    break;
-  }
-}
-
-// Grab the quote
-var quoteIndex = Math.floor(Math.random()*lines.length);
-
-// Save the quotes we've used back to local storage
-usedQuotes.push(lines[quoteIndex][0]);
-localStorage["usedQuotes"] = usedQuotes;
-
-// Show the quote
+var quotes = (localStorage.quotes) ? JSON.parse(localStorage.quotes) : shuffleArray(lines);
+// select a quote
+var quote = quotes.pop();
+if (quotes.length == 0)
+  quotes = shuffleArray(lines);
+// Save the quotes we haven't used yet used back to local storage
+localStorage["quotes"] = JSON.stringify(quotes);
+// match the correct image with the quote
 var image = "";
-if (lines[quoteIndex][1][0] == "archer") {
-  image = "archer_big.png";
+if (quote[0] == "archer") {
+  image = "images/archer.png";
 }
-else if (lines[quoteIndex][1][0] == "lana") {
-  image = "lana_big.png";
+else if (quote[0] == "lana") {
+  image = "images/lana.png";
 }
-else if (lines[quoteIndex][1][0] == "malory") {
-  image = "malory.png";
+else if (quote[0] == "malory") {
+  image = "images/malory.png";
 }
 else {
-  image = "archer_elegant_dinner_party.jpg";
+  image = "images/dinner_party.jpg";
 }
+// Show the quote and image
 $("body").children("img").prop("src", image);
-//$("body").children("img").prop("src", (lines[quoteIndex][1][0] == "archer") ? "archer_big.png" : "lana_big.png");
-$("body").children("h2").html(lines[quoteIndex][1][1]);
+$("body").children("h2").html(quote[1]);
