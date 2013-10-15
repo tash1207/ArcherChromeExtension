@@ -511,12 +511,13 @@ var lines = [
   ["dinner_party", "CALPERNIA!"]
 ];
 
-// Grab the quote indexes we've used before from local storage
+// Grab quotes local storage if they exist there, else create a new list 
 var quotes = (localStorage.quotes) ? JSON.parse(localStorage.quotes) : shuffleArray(lines);
-// select a quote
-var quote = quotes.pop();
+// if the length of quotes is 0, reset it
 if (quotes.length == 0)
   quotes = shuffleArray(lines);
+// select a quote
+var quote = quotes.pop();
 // Save the quotes we haven't used yet used back to local storage
 localStorage["quotes"] = JSON.stringify(quotes);
 // match the correct image with the quote
