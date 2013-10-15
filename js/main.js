@@ -299,11 +299,11 @@ var lines = [
   ["archer", "Wow, if the five year old me knew that, he'd get a huge boner."],
   ["archer", "Noah, I'm half drunk and slathered in every bodily fluid there is... so yeah... this is about as Pirate Kingy as I'm going to get so brief away... Noah... Good Morning."],
   ["archer", "Noah, I've still got four bullets."],
-  ["archer", "Do you know what ‘License to kill' means?"],
+  ["archer", "Do you know what 'License to kill' means?"],
   ["archer", "The world holds its breath."],
   ["archer", "How should I know?"],
   ["archer", "Who am I, Karl Landsteiner?"],
-  ["archer", "Your exact words, Pam: “Dr. Charles Drew or I will eat a bag of dicks”!"],
+  ["archer", "Your exact words, Pam: 'Dr. Charles Drew or I will eat a bag of dicks'!"],
   ["archer", "Thanks, Human Shield."],
   ["archer", "Since ever!"],
   ["archer", "[Singing] Eastbound and dowwwwwn!"],
@@ -497,7 +497,7 @@ var lines = [
   ["malory", "Look at me! Chopping ice for a Tom Collins like a field hand."],
   ["malory", "How can you even think about happy hour at a time like this? [Malory takes a drink from a highball glass]"],
   ["malory", "Well, people in hell want ice water."],
-  ["malory", "The classic Irish man's dilemma: Do I eat the potato or do I let it ferment so I can drink it later?"],  
+  ["malory", "The classic Irish man's dilemma: Do I eat the potato or do I let it ferment so I can drink it later?"],
   ["dinner_party", "CALPERNIA!"]
 ];
 
